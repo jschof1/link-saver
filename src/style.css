@@ -11,3 +11,7 @@ input:focus {
 *:focus {
   outline: none;
 }
+
+body {
+  grid-template-columns: ;
+}

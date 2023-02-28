@@ -13,14 +13,21 @@ const StyledContainer = styled.div`
   font-family: Helvetica Neue;
 `;
 
+const BodyContainer = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
 const StyledNote = styled.div`
   display: flex;
   flex-direction: row;
   margin: 10px 0;
   boxShadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 `;
-
-
 
 const StyledLink = styled.a`
 text-decoration: none;
@@ -87,6 +94,7 @@ const LinkInput = ({ addLink }) => {
           onKeyDown={handleEnter}
         />
       </span>
+      {/* <p onClick={handleEnter}> + </p> */}
     </StyledNote>
   );
 };
@@ -138,8 +146,10 @@ for (let i = 1; i <= numPinboards; i++) {
 }
   return (
     <>
+    <BodyContainer>
     {pinboards}
     <button onClick={addPinboard}>+</button>
+    </BodyContainer>
     </>
   )
 }
